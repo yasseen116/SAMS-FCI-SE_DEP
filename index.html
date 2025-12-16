@@ -1,0 +1,204 @@
+<!DOCTYPE html><html lang="ar" dir="rtl"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>كلية الحاسبات والمعلومات - أكاديمية السادات</title>
+    <link rel="icon" type="image/x-icon" href="/images/logo.png">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo" onclick="window.location.href ='/'">
+                    <img src="images/logo-78.png" alt="شعار أكاديمية السادات" class="logo-img">
+                    <div class="logo-text">
+                        <span class="logo-title">كلية الحاسبات والمعلومات</span>
+                        <span class="logo-subtitle">أكاديمية السادات</span>
+                    </div>
+                </div>
+                
+                <nav class="nav">
+                    <ul class="nav-menu">
+                        <li><a href="/#home" class="nav-link">الصفحة الرئيسية</a></li>
+                        <li><a href="/#cards-section" class="nav-link">الخدمات الأكاديمية</a></li>
+                        <li><a href="#" class="nav-link">المجلة العلمية</a></li>
+                        <!--<li><a href="/#links-section" class="nav-link">المعلومات الأكاديمية</a></li>-->
+                        <li><a href="/contact" class="nav-link">التواصل معنا</a></li>
+                    </ul>
+                    
+                    <div class="header-actions">
+                        <a href="/en/" class="lang-toggle">English</a>
+                        <button class="burger-menu" onclick="toggleMenu()">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </button>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu-overlay" onclick="toggleMenu()"></div>
+    <!-- Main Content -->
+    <main>
+        <!-- Home Section -->
+        <section id="home" class="hero">
+            <div class="carousel">
+                <div class="carousel-track">
+                                        <div class="carousel-slide active">
+                        <img src="images/688f4804b1947.jpg" alt="صورة الكلية 1">
+                        <div class="slide-overlay"></div>
+                    </div>
+                                        <div class="carousel-slide ">
+                        <img src="images/688f4805eddb9.jpg" alt="صورة الكلية 2">
+                        <div class="slide-overlay"></div>
+                    </div>
+                                        <div class="carousel-slide ">
+                        <img src="images/688f4b6b60785.jpeg" alt="صورة الكلية 3">
+                        <div class="slide-overlay"></div>
+                    </div>
+                                    </div>
+                
+                <div class="carousel-content">
+                    <div class="container">
+                        <h1 class="hero-title">كلية الحاسبات والمعلومات</h1>
+                        
+                        <div class="hero-description">
+                            <p>في إطار خطة أكاديمية السادات التي تستهدف التوسع في إنشاء الكليات وإضافة تخصصات جديدة من خلال برامج تعليمية يتطلبها سوق العمل في مصر والبلدان العربية، فقد تم إنشاء كلية الحاسبات والمعلومات تمنح الأكاديمية درجة البكالوريوس في الحاسبات والمعلومات في أحد التخصصات التالية:<br>
+علوم الحاسب - نظم المعلومات - هندسة البرمجيات</p>
+                        </div>
+                                                <a href="https://drive.google.com/file/d/1PzMb8SVrkaJJdWj8Dk7TN1KblQc7kfsU/view" target="_blank" class="hero-btn">
+                            دليل الطالب يكلية الحاسبات والمعلومات                        </a>
+                    </div>
+                </div>
+                
+                <div class="carousel-nav">
+                    <button class="carousel-btn prev" onclick="changeSlide(-1)">❮</button>
+                    <button class="carousel-btn next" onclick="changeSlide(1)">❯</button>
+                </div>
+                
+                <div class="carousel-indicators">
+                                        <button class="indicator active" onclick="goToSlide(0)"></button>
+                                        <button class="indicator " onclick="goToSlide(1)"></button>
+                                        <button class="indicator " onclick="goToSlide(2)"></button>
+                                    </div>
+            </div>
+        </section>
+
+        <!-- Cards Section -->
+        <section id="cards-section" class="cards-section">
+            <div class="container">
+                <h2 class="section-title">الخدمات الأكاديمية</h2>
+                
+                <div class="cards-grid">
+                                        <div class="card">
+                        <div class="card-icon">
+                            <img src="images/688f4e7904fda.png" alt="شروط الالتحاق بكلية الحاسبات والمعلومات">
+                        </div>
+                        <h3 class="card-title">شروط الالتحاق بكلية الحاسبات والمعلومات</h3>
+                        <p class="card-description">هناك مجموعة من الشروط للقبول في الحاسبات والمعلومات بأكاديمية السادات للعلوم الإدارية للتعرف على هذه الشروط اضغط على الرابط التالي</p>
+                                                                        <a href="post?title=قواعد-وأحكام-القبول" class="card-btn">إقرأ المزيد</a>
+                                            </div>
+                                        <div class="card">
+                        <div class="card-icon">
+                            <img src="images/folder.png" alt="طلبات القبول والوثائق المطلوبة للالتحاق بالأكاديمية">
+                        </div>
+                        <h3 class="card-title">طلبات القبول والوثائق المطلوبة للالتحاق بالأكاديمية</h3>
+                        <p class="card-description">هناك العديد من الوثائق المطلوبة للالتحاق بكلية الحاسبات والمعلومات بأكاديمية السادات للعلوم الإدارية للتعرف هذه الوثائق اضغط على الرابط التالي</p>
+                                                                        <a href="post?title=طلبات-القبول-والوثائق-المطلوبة" class="card-btn">إقرأ المزيد</a>
+                                            </div>
+                                        <div class="card">
+                        <div class="card-icon">
+                            <img src="images/list.png" alt="خطوات التقدم للقبول بكلية الحاسبات والمعلومات">
+                        </div>
+                        <h3 class="card-title">خطوات التقدم للقبول بكلية الحاسبات والمعلومات</h3>
+                        <p class="card-description">هناك العديد من الخطوات المطلوبة للقبول بكلية الحاسبات والمعلومات بأكاديمية السادات للعلوم الإدارية للتعرف على هذه الخطوات اضغط على الرابط التالي</p>
+                                                                        <a href="post?title=قواعد-وأحكام-القبول" class="card-btn">إقرأ المزيد</a>
+                                            </div>
+                                        <div class="card">
+                        <div class="card-icon">
+                            <img src="images/success.png" alt="المزايا الخاصة بكلية الحاسبات والمعلومات">
+                        </div>
+                        <h3 class="card-title">المزايا الخاصة بكلية الحاسبات والمعلومات</h3>
+                        <p class="card-description">تمنح كلية الحاسبات والمعلومات بأكاديمية السادات للعلوم الإدارية للطالب العديد من المزايا وللتعرف على هذه المزايا يرجى زيارة الرابط التالي</p>
+                                                                        <a href="post?title=نظام-الدراسة" class="card-btn">إقرأ المزيد</a>
+                                            </div>
+                                        <div class="card">
+                        <div class="card-icon">
+                            <img src="images/notebook.png" alt="المهارات الأساسية التي يكتسبها الطالب">
+                        </div>
+                        <h3 class="card-title">المهارات الأساسية التي يكتسبها الطالب</h3>
+                        <p class="card-description">يحصل الطالب في كلية الحاسبات والمعلومات من خلال دراسته على العديد من المهارات الأساسية وللتعرف على المهارات المكتسبة يرجى زيارة الرابط التالي</p>
+                                                                        <a href="post?title=رؤية-ورسالة-وأهداف-كلية-الحاسبات-والمعلومات" class="card-btn">إقرأ المزيد</a>
+                                            </div>
+                                        <div class="card">
+                        <div class="card-icon">
+                            <img src="images/startup.png" alt="مجالات العمل لخريج الحاسبات والمعلومات">
+                        </div>
+                        <h3 class="card-title">مجالات العمل لخريج الحاسبات والمعلومات</h3>
+                        <p class="card-description">تتيح الدرجة العلمية التي تمنحها الكلية لخريجيها فرصة العمل في العديد من المجالات على جميع مستويات العمل وللتعرف على هذه المجالات يرجى زيارة الرابط التالي</p>
+                                                                        <a href="post?title=مجالات-العمل" class="card-btn">إقرأ المزيد</a>
+                                            </div>
+                                    </div>
+            </div>
+        </section>
+
+        <!-- Links Section -->
+        <section id="links-section" class="links-section">
+            <div class="container">
+                <h2 class="section-title">المعلومات الأكاديمية</h2>
+                
+                <div class="links-grid">
+                                        <div class="links-column">
+                        <h3 class="column-title">عن الاكاديمية</h3>
+                        <ul class="links-list">
+                            <li><a href="post?title=نبذة-عن-الاكاديمية">نبذة عن الاكاديمية</a></li><li><a href="post?title=رؤية-ورسالة-وأهداف-كلية-الحاسبات-والمعلومات">رؤية ورسالة وأهداف كلية الحاسبات والمعلومات</a></li><li><a href="post?title=الأقسام-العلمية-والدرجات-العلمية-الممنوحة">الأقسام العلمية والدرجات العلمية الممنوحة</a></li>                        </ul>
+                    </div>
+                                        <div class="links-column">
+                        <h3 class="column-title">لائحـــة الدراسة</h3>
+                        <ul class="links-list">
+                            <li><a href="post?title=نظام-الدراسة">نظام الدراسة</a></li><li><a href="post?title=خطة-الدراسة">خطة الدراسة</a></li><li><a href="post?title=الإرشاد-والتسجيل">الإرشاد والتسجيل</a></li><li><a href="post?title=العبء-الدراسي">العبء الدراسي</a></li><li><a href="post?title=الانسحاب-والإضافة">الانسحاب والإضافة</a></li><li><a href="post?title=الاختبارات">الاختبارات</a></li><li><a href="post?title=توزيع-الدرجات">توزيع الدرجات</a></li><li><a href="post?title=إعادة-المقررات">إعادة المقررات</a></li><li><a href="post?title=قواعد-وأحكام-القبول">قواعد وأحكام القبول</a></li><li><a href="post?title=نظام-التقديرات-والمعدلات-ومرتبة-الشرف">نظام التقديرات والمعدلات ومرتبة الشرف</a></li>                        </ul>
+                    </div>
+                                        <div class="links-column">
+                        <h3 class="column-title">لوائح الامتحانات والتقييم والانضباط</h3>
+                        <ul class="links-list">
+                            <li><a href="post?title=الرسوب-وتقدير-غير-مكتمل">الرسوب وتقدير غير مكتمل</a></li><li><a href="post?title=الإنذار-الأكاديمي">الإنذار الأكاديمي</a></li><li><a href="post?title=تغيير-التخصص-أو-استكمال-تخصص-إضافي">تغيير التخصص أو استكمال تخصص إضافي</a></li><li><a href="post?title=المواظبة-وإنذار-الغياب">المواظبة وإنذار الغياب</a></li><li><a href="post?title=وقف-التسجيل،-الرسوم-الدراسية-واعتماد-النتائج">وقف التسجيل، الرسوم الدراسية واعتماد النتائج</a></li><li><a href="post?title=نظام-التأديب-والأحكام-العامة-والانتقالية">نظام التأديب والأحكام العامة والانتقالية</a></li>                        </ul>
+                    </div>
+                                    </div>
+            </div>
+        </section>
+    </main>
+    <script>
+        const totalSlides = 3;
+    </script>
+    <script src="js/script.js"></script>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-map">
+                    <h3>موقعنا على الخريطة</h3>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3456.6957586736603!2d31.24706931452763!3d29.959428629539904!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x145847efb305d439%3A0x7b99c3a86f98ca43!2sSadat+Academy+for+Management+Sciences!5e0!3m2!1sen!2seg!4v1467468285325" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+                
+                <div class="footer-vision">
+                    <h3>رؤية الأكاديمية</h3>
+                    <p> ان تكون في صدارة الكليات في مجال علوم الحاسب تعليميا وبحثيا محليا وإقليميا وعالميا من خلال برامج تعليمية معتمدة تتسم بالتميز والحداثة ومحاكاة ديناميكية سوق العمل وتدعمها شراكات فاعلة مع عدد من الجامعات المصنفة ومؤسسات تكنولوجيا المعلومات. </p>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>حقوق الطبع والنشر © 2025 أكاديمية السادات للعلوم الإدارية</p>
+                <p>تم تصميمه بواسطة Abdulla Galaby</p>
+            </div>
+        </div>
+    </footer>
+
+    
+
+</body></html>
