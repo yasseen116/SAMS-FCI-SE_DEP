@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Faculty of Computers and Information - Sadat Academy</title>
+    <link rel="icon" type="image/x-icon" href="/images/logo.png">
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="lang-en">
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo" onclick="window.location.href ='/en/'">
+                    <img src="../images/logo-78.png" alt="Sadat Academy Logo" class="logo-img">
+                    <div class="logo-text">
+                        <span class="logo-title">Faculty of Computers and Information</span>
+                        <span class="logo-subtitle">Sadat Academy</span>
+                    </div>
+                </div>
+                
+                <nav class="nav">
+                    <ul class="nav-menu">
+                        <li><a href="/en/#home" class="nav-link">Home</a></li>
+                        <li><a href="/en/#cards-section" class="nav-link">Academic Services</a></li>
+                        <li><a href="#" class="nav-link">Scientific journal</a></li>
+                        <!--<li><a href="/en/#links-section" class="nav-link">Academic Information</a></li>-->
+                        <li><a href="/en/contact" class="nav-link">Contact Us</a></li>
+                    </ul>
+                    
+                    <div class="header-actions">
+                        <a href="/" class="lang-toggle">العربية</a>
+                        <button class="burger-menu" onclick="toggleMenu()">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </button>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu-overlay" onclick="toggleMenu()"></div>
+    <!-- Main Content -->
+    <main>
+        <!-- Home Section -->
+        <section id="home" class="hero">
+            <div class="carousel">
+                <div class="carousel-track">
+                                        <div class="carousel-slide active">
+                        <img src="../images/688f4804b1947.jpg" alt="College Image 1">
+                        <div class="slide-overlay"></div>
+                    </div>
+                                        <div class="carousel-slide ">
+                        <img src="../images/688f4805eddb9.jpg" alt="College Image 2">
+                        <div class="slide-overlay"></div>
+                    </div>
+                                        <div class="carousel-slide ">
+                        <img src="../images/688f4b6b60785.jpeg" alt="College Image 3">
+                        <div class="slide-overlay"></div>
+                    </div>
+                                    </div>
+                
+                <div class="carousel-content">
+                    <div class="container">
+                        <h1 class="hero-title">Faculty of Computers and Information</h1>
+                        
+                        <div class="hero-description">
+                            <p>As part of Sadat Academy&#039;s plan to expand the establishment of colleges and add new specializations through educational programs required by the labor market in Egypt and Arab countries, the College of Computers and Information was established. The academy awards a bachelor&#039;s degree in computer science and information in one of the following specializations:<br />
+Computer Science - Information Systems - Software Engineering</p>
+                        </div>
+                                                <a href="https://drive.google.com/file/d/1PzMb8SVrkaJJdWj8Dk7TN1KblQc7kfsU/view" target="_blank" class="hero-btn">
+                            Student Guide for the College of Computers and Information                        </a>
+                    </div>
+                </div>
+                
+                <div class="carousel-nav">
+                    <button class="carousel-btn prev" onclick="changeSlide(-1)">❮</button>
+                    <button class="carousel-btn next" onclick="changeSlide(1)">❯</button>
+                </div>
+                
+                <div class="carousel-indicators">
+                                        <button class="indicator active" onclick="goToSlide(0)"></button>
+                                        <button class="indicator " onclick="goToSlide(1)"></button>
+                                        <button class="indicator " onclick="goToSlide(2)"></button>
+                                    </div>
+            </div>
+        </section>
+
+        <!-- Cards Section -->
+        <section id="cards-section" class="cards-section">
+            <div class="container">
+                <h2 class="section-title">Academic Services</h2>
+                
+                <div class="cards-grid">
+                                        <div class="card">
+                        <div class="card-icon">
+                            <img src="../images/688f4e7904fda.png" alt="Admission Requirements for the Faculty of Computers and Information">
+                        </div>
+                        <h3 class="card-title">Admission Requirements for the Faculty of Computers and Information</h3>
+                        <p class="card-description">There are a set of requirements for admission to the Faculty of Computers and Information at Sadat Academy for Management Sciences. To learn more about these requirements, click the following link.</p>
+                                                                        <a href="post?title=Admission-Rules-and-Conditions" class="card-btn">Read More</a>
+                                            </div>
+                                        <div class="card">
+                        <div class="card-icon">
+                            <img src="/images/folder.png" alt="Required Documents for Academy Admission">
+                        </div>
+                        <h3 class="card-title">Required Documents for Academy Admission</h3>
+                        <p class="card-description">There are several documents required for admission to the Faculty of Computers and Information at Sadat Academy for Management Sciences. To learn more about these documents, click the following link.</p>
+                                                                        <a href="post?title=Applications-and-required-documents" class="card-btn">Read More</a>
+                                            </div>
+                                        <div class="card">
+                        <div class="card-icon">
+                            <img src="/images/list.png" alt="Application Steps for Admission to the Faculty of Computers and Information">
+                        </div>
+                        <h3 class="card-title">Application Steps for Admission to the Faculty of Computers and Information</h3>
+                        <p class="card-description">There are several steps required for admission to the Faculty of Computers and Information at Sadat Academy for Management Sciences. To learn more about these steps, click the following link.</p>
+                                                                        <a href="post?title=Admission-Rules-and-Conditions" class="card-btn">Read More</a>
+                                            </div>
+                                        <div class="card">
+                        <div class="card-icon">
+                            <img src="/images/success.png" alt="Special Benefits of the Faculty of Computers and Information">
+                        </div>
+                        <h3 class="card-title">Special Benefits of the Faculty of Computers and Information</h3>
+                        <p class="card-description">The Faculty of Computers and Information at Sadat Academy for Management Sciences offers students several benefits. To learn more about these benefits, please visit the following link.</p>
+                                                                        <a href="post?title=Study-System" class="card-btn">Read More</a>
+                                            </div>
+                                        <div class="card">
+                        <div class="card-icon">
+                            <img src="/images/notebook.png" alt="Essential Skills Acquired by Students">
+                        </div>
+                        <h3 class="card-title">Essential Skills Acquired by Students</h3>
+                        <p class="card-description">Students at the Faculty of Computers and Information acquire many essential skills through their studies. To learn more about the acquired skills, please visit the following link.</p>
+                                                                        <a href="post?title=Vision,-Mission-and-Objectives-of-the-College-of-Computers-and-Information" class="card-btn">Read More</a>
+                                            </div>
+                                        <div class="card">
+                        <div class="card-icon">
+                            <img src="/images/startup.png" alt="Career Opportunities for Graduates of Computers and Information">
+                        </div>
+                        <h3 class="card-title">Career Opportunities for Graduates of Computers and Information</h3>
+                        <p class="card-description">The degree awarded by the faculty provides graduates with opportunities to work in various fields at all levels. To learn more about these career opportunities, please visit the following link.</p>
+                                                                        <a href="post?title=Fields-of-work" class="card-btn">Read More</a>
+                                            </div>
+                                    </div>
+            </div>
+        </section>
+
+        <!-- Links Section -->
+        <section id="links-section" class="links-section">
+            <div class="container">
+                <h2 class="section-title">Academic Information</h2>
+                
+                <div class="links-grid">
+                                        <div class="links-column">
+                        <h3 class="column-title">About the Academy</h3>
+                        <ul class="links-list">
+                            <li><a href="post?title=About-the-Academy">About the Academy</a></li><li><a href="post?title=Vision,-Mission-and-Objectives-of-the-College-of-Computers-and-Information">Vision, Mission and Objectives of the College of Computers and Information</a></li><li><a href="post?title=Academic-departments-and-degrees-awarded">Academic departments and degrees awarded</a></li>                        </ul>
+                    </div>
+                                        <div class="links-column">
+                        <h3 class="column-title">Study regulations</h3>
+                        <ul class="links-list">
+                            <li><a href="post?title=Study-System">Study System</a></li><li><a href="post?title=Study-Plan">Study Plan</a></li><li><a href="post?title=Academic-Advising-and-Registration">Academic Advising and Registration</a></li><li><a href="post?title=Academic-Load">Academic Load</a></li><li><a href="post?title=Withdrawal-and-Add/Drop">Withdrawal and Add/Drop</a></li><li><a href="post?title=Examinations">Examinations</a></li><li><a href="post?title=Grading-Distribution">Grading Distribution</a></li><li><a href="post?title=Course-Repetition">Course Repetition</a></li><li><a href="post?title=Admission-Rules-and-Conditions">Admission Rules and Conditions</a></li><li><a href="post?title=Grading-System,-GPA,-and-Honors">Grading System, GPA, and Honors</a></li>                        </ul>
+                    </div>
+                                        <div class="links-column">
+                        <h3 class="column-title">Examinations, Assessment &amp; Discipline</h3>
+                        <ul class="links-list">
+                            <li><a href="post?title=Failure-and-Incomplete-Grade">Failure and Incomplete Grade</a></li><li><a href="post?title=Academic-Probation">Academic Probation</a></li><li><a href="post?title=Change-of-Major-or-Additional-Major">Change of Major or Additional Major</a></li><li><a href="post?title=Attendance-and-Absence-Warning">Attendance and Absence Warning</a></li><li><a href="post?title=Registration-Suspension,-Tuition-Fees,-and-Results-Approval">Registration Suspension, Tuition Fees, and Results Approval</a></li><li><a href="post?title=Disciplinary-System-and-General/Transitional-Provisions">Disciplinary System and General/Transitional Provisions</a></li>                        </ul>
+                    </div>
+                                    </div>
+            </div>
+        </section>
+    </main>
+    <script>
+        const totalSlides = 3;
+    </script>
+    <script src="/assets/js/script.js"></script>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-map">
+                    <h3>Our Location</h3>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3456.6957586736603!2d31.24706931452763!3d29.959428629539904!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x145847efb305d439%3A0x7b99c3a86f98ca43!2sSadat+Academy+for+Management+Sciences!5e0!3m2!1sen!2seg!4v1467468285325" width="100%" height="300" style="border:0;" allowfullscreen loading="lazy"></iframe>
+                </div>
+                
+                <div class="footer-vision">
+                    <h3>Academy Vision</h3>
+                    <p>To be a leading college in the field of computer science, both in education and research, locally, regionally, and globally, through accredited educational programs characterized by excellence, modernity, and simulation of the dynamics of the labor market, supported by effective partnerships with a number of ranked universities and information technology institutions.</p>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>Copyright © 2025 Sadat Academy for Management Sciences</p>
+                <p>Designed by Abdulla Galaby</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
