@@ -1,8 +1,9 @@
 """Database engine/session setup and FastAPI session dependency."""
 
-
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
+# 1. ADD THIS IMPORT
+from sqlalchemy.ext.declarative import declarative_base
 
 # SQLite database URL;
 DATABASE_URL = "sqlite:///./app.db"
@@ -11,6 +12,9 @@ DATABASE_URL = "sqlite:///./app.db"
 engine = create_engine(DATABASE_URL, connect_args={"check_same_thread": False})
 
 SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
+
+# 2. DEFINE THE BASE CLASS (This was missing)
+Base = declarative_base()
 
 def get_session():
     session = SessionLocal()

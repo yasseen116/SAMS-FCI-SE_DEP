@@ -3,9 +3,12 @@ from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from .core.config import settings
 from .core.database import engine
-from .core import Base
+# FIX 1: Import Base directly from database.py, not just .core
+from .core.database import Base
 from .routers import announcements, auth, dashboard, gallery, staff
 
+# FIX 2: Explicitly import the models so SQLAlchemy knows about them
+import app.models.staff 
 
 app = FastAPI(title=settings.app_name, version=settings.version)
 
@@ -26,10 +29,9 @@ app.include_router(dashboard.router, prefix=settings.api_prefix)
 # Initialize database tables on startup
 @app.on_event("startup")
 def startup_event():
-    
+    # Because we imported app.models.staff above, this will now create the table
     Base.metadata.create_all(bind=engine)
     print("Database tables initialized")
-
 
 @app.get("/health", tags=["health"])
 def health_check() -> dict:
