@@ -1,9 +1,9 @@
 """FastAPI application entry point and router registration."""
-
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
-
 from .core.config import settings
+from .core.database import engine
+from .core import Base
 from .routers import announcements, auth, dashboard, gallery, staff
 
 
@@ -22,6 +22,13 @@ app.include_router(gallery.router, prefix=settings.api_prefix)
 app.include_router(staff.router, prefix=settings.api_prefix)
 app.include_router(auth.router, prefix=settings.api_prefix)
 app.include_router(dashboard.router, prefix=settings.api_prefix)
+
+# Initialize database tables on startup
+@app.on_event("startup")
+def startup_event():
+    
+    Base.metadata.create_all(bind=engine)
+    print("Database tables initialized")
 
 
 @app.get("/health", tags=["health"])
