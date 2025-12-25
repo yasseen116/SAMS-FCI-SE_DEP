@@ -1,22 +1,21 @@
-"""Gallery media ORM model placeholder."""
-
-from sqlalchemy import Column, Integer, String, Text, DateTime
-
+from sqlalchemy import Column, Integer, String, Text, DateTime, Boolean, Index
+from sqlalchemy.sql import func
 from .base import Base
 
+class Gallery(Base):
+    __tablename__ = "gallery"
 
-class GalleryItem(Base):
-    """
-    Represents images/media shown in the gallery.
-    TODO: add id, title/caption, media_url, alt_text, uploaded_at, created_by metadata.
-    """
+    id = Column(Integer, primary_key=True, index=True)
+    title = Column(String(255), nullable=False)
+    media_url = Column(String(500), nullable=False)
+    description = Column(Text, nullable=True)
+    alt_text = Column(String(255), nullable=True)
+    created_by = Column(String(100), nullable=True)
+    created_at = Column(DateTime(timezone=True), server_default=func.now(), nullable=False)
+    updated_at = Column(DateTime(timezone=True), onupdate=func.now(), nullable=True)    
+    is_featured = Column(Boolean, default=False, nullable=False)
 
-    __tablename__ = "gallery_items"
-
-    # Example columns to add during implementation:
-    # id = Column(Integer, primary_key=True, index=True)
-    # title = Column(String(255))
-    # description = Column(Text)
-    # media_url = Column(String(512), nullable=False)
-    # uploaded_at = Column(DateTime(timezone=True))
-    pass
+    __table_args__ = (
+        Index('ix_gallery_is_featured', 'is_featured'),
+        Index("ix_gallery_created_at", "created_at"),
+    )
