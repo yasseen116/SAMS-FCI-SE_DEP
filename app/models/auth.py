@@ -1,22 +1,25 @@
 """Authentication/administrators ORM model placeholder."""
 
-from sqlalchemy import Column, Integer, String, Boolean, DateTime
+from sqlalchemy import Column, Integer, String, Boolean, DateTime, ForeignKey
+from sqlalchemy.sql import func
 
 from .base import Base
+from .staff import StaffMember
 
 
-class AdminUser(Base):
+class User(Base):
     """
-    Represents authenticated administrative users.
-    TODO: add id, username/email, hashed_password, role, is_active, created_at/updated_at fields.
+    Represents authenticated users.
     """
 
-    __tablename__ = "admin_users"
+    __tablename__ = "users"
 
-    # Example columns to add during implementation:
-    # id = Column(Integer, primary_key=True, index=True)
-    # email = Column(String(255), unique=True, nullable=False, index=True)
-    # hashed_password = Column(String(255), nullable=False)
-    # is_active = Column(Boolean, default=True)
-    # created_at = Column(DateTime(timezone=True))
-    pass
+    id = Column(Integer, primary_key=True, index=True)
+    username = Column(String(50), unique=True, nullable=False, index=True)
+    email = Column(String(255), unique=True, nullable=False, index=True)
+    hashed_password = Column(String(255), nullable=False)
+    role = Column(String(50), nullable=False, default="user")
+    is_active = Column(Boolean, default=True)
+    staff_id = Column(Integer, ForeignKey(StaffMember.id), nullable=True)
+    created_at = Column(DateTime(timezone=True), server_default=func.now())
+    updated_at = Column(DateTime(timezone=True), onupdate=func.now())

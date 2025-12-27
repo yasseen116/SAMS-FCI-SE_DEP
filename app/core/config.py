@@ -1,8 +1,9 @@
 """Application configuration settings."""
-
+import secrets
 from typing import List
 
-from pydantic_settings import BaseSettings
+from pydantic import ConfigDict
+from pydantic_settings import BaseSettings, SettingsConfigDict
 
 
 class Settings(BaseSettings):
@@ -13,8 +14,12 @@ class Settings(BaseSettings):
     version: str = "0.1.0"
     allow_origins: List[str] = ["*"]
 
-    class Config:
-        env_file = ".env"
+    # JWT settings
+    secret_key: str = secrets.token_urlsafe(32)
+    algorithm: str = "HS256"
+    access_token_expire_minutes: int = 30
+
+    model_config = SettingsConfigDict(env_file='.env', extra='allow')
 
 
 settings = Settings()
