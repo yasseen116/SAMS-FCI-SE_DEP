@@ -5,6 +5,7 @@ from fastapi.staticfiles import StaticFiles
 
 # FIX 2: Explicitly import the models so SQLAlchemy knows about them
 import app.models.staff
+import app.models.auth
 
 from .core.config import settings
 
@@ -43,4 +44,3 @@ def startup_event():
 def health_check() -> dict:
     """Simple health check endpoint."""
     return {"status": "ok"}
-
